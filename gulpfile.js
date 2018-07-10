@@ -4,7 +4,7 @@ var sass = require('gulp-sass')
 var url = require('url')
 var fs = require('fs');
 var path = require('path')
-gulp.task('server', function() {
+gulp.task('server', ['sass'], function() {
     gulp.src('src')
         .pipe(server({
             port: 8080,
