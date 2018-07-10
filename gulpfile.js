@@ -24,3 +24,7 @@ gulp.task('sass', function() {
         .pipe(sass())
         .pipe(gulp.dest('./src/css'))
 })
+gulp.task('watch', function() {
+    gulp.watch('./src/scss/*.scss', ['sass']);
+})
+gulp.task('dev', ['server', 'watch'])
